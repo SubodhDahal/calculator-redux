@@ -1,0 +1,20 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #555753FF;
+    padding: 100px;
+}
+
+.lcd-display {
+    background: #C17D11FF;
+    height: 110px;
+    margin: 5px;
+}
+
+.calculator-buttons__button {
+    margin: 5px;
+    width: 100%;
+}

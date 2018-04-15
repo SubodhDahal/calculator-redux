@@ -4,6 +4,7 @@ import {devToolsEnhancer} from 'redux-devtools-extension'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import reducer from './reducer'
+import 'bulma/css/bulma.css'
 import './style.css'
 import App from './components/App'
 
