@@ -3,6 +3,8 @@ import { SET_OPERATOR } from './action-types'
 import { CALCULATE_RESULT } from './action-types'
 import { CLEAR_ACCUMULATOR } from './action-types'
 
+import performOperation from '../operations'
+
 const initialState = () => ({
     number: 0,
     accumulator: null,
@@ -24,7 +26,7 @@ function setOperatorReducer(state, payload) {
 
 function calculateResultReducer(state) {
     const accumulator = state.number
-    const number = state.accumulator + state.number
+    const number = performOperation(state.accumulator, state.number, state.operator)
 
     return {...state, number, accumulator}
 }
