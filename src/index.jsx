@@ -1,16 +1,13 @@
-import {Provider} from 'react-redux'
-import {createStore} from 'redux'
-import {devToolsEnhancer} from 'redux-devtools-extension'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import reducer from './reducer'
+
+import {Provider} from 'react-redux'
+import store from './store/index'
+
 import 'bulma/css/bulma.css'
 import './style.css'
-import App from './components/App'
 
-const store = createStore(
-    reducer,
-    devToolsEnhancer())
+import App from './components/App'
 
 ReactDOM.render(
     <Provider store={store}>
