@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Button from './Button'
 
 export default class Buttons extends React.Component {
@@ -8,6 +7,8 @@ export default class Buttons extends React.Component {
 
         this.buttons = props.buttons
         this.type = props.type
+
+        this.clickHandler = props.clickHandler
     }
 
     render () {
@@ -23,10 +24,12 @@ export default class Buttons extends React.Component {
             return <div className="columns" key={`${this.type}-${i}`}>
                 {
                     buttonRow.map((button, j) => {
-                        return <Button button={button} type={this.type} key={`${this.type}-${i}-${j}`} />
+                        return <Button button={button} type={this.type} clickHandler={this.clickHandler} key={`${this.type}-${i}-${j}`} />
                     })
                 }
             </div>
         })
     }
+
+
 }
