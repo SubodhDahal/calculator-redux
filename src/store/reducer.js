@@ -1,6 +1,7 @@
 import { SET_DIGIT } from './action-types'
 import { SET_OPERATOR } from './action-types'
 import { CALCULATE_RESULT } from './action-types'
+import { CLEAR_ACCUMULATOR } from './action-types'
 
 const initialState = () => ({
     number: 0,
@@ -28,6 +29,14 @@ function calculateResultReducer(state) {
     return {...state, number, accumulator}
 }
 
+function clearAccumulatorReducer(state) {
+    const operator = null
+    const accumulator = null
+    const number = 0
+
+    return {...state, number, accumulator, operator}
+}
+
 export default function reducer(state = initialState(), action) {
     const {type, payload} = action
 
@@ -40,6 +49,9 @@ export default function reducer(state = initialState(), action) {
 
         case CALCULATE_RESULT:
             return calculateResultReducer(state)
+
+        case CLEAR_ACCUMULATOR:
+            return clearAccumulatorReducer(state)
 
         default:
             return state
