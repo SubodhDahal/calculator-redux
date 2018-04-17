@@ -10,8 +10,19 @@ body {
 
 .lcd-display {
     background: #C17D11FF;
+    color: #0f0a0a;
     height: 110px;
     margin: 5px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.lcd-display__main {
+    font-size: 3.8rem;
+    line-height: 4rem;
+}
+
+.lcd-display__aux {
+    min-height: 26px;
 }
 
 .calculator-buttons__button {
