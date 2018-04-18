@@ -65,11 +65,16 @@ function calculateResultReducer(state) {
 }
 
 function clearAccumulatorReducer(state) {
-    const operator = null
-    const accumulator = null
-    const number = 0
+   const newAccumulator = Object.assign({}, state.accumulator, {
+        number: null,
+        operator: null,
+    });
 
-    return {...state, number, accumulator, operator}
+    return {
+        ...state,
+        accumulator: newAccumulator,
+        number: initialNumber,
+    }
 }
 
 export default function reducer(state = initialState(), action) {
