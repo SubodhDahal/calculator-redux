@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import Buttons from './Buttons'
-import {clearAccumulator, setDigit} from '../store/actions'
+import {clearAccumulator, setDigit, setDecimalPoint} from '../store/actions'
 
 const buttons = [
                 [7, 8, 9],
@@ -28,6 +28,8 @@ export default class Digits extends React.Component {
 
         if (label === 'C') {
             dispatch(clearAccumulator())
+        } else if (label === '.') {
+            dispatch(setDecimalPoint())
         } else {
             dispatch(setDigit(label))
         }

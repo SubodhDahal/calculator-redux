@@ -1,8 +1,8 @@
-export default function performOperation(lhs, rhs, operator) {
-    lhs = parseFloat(lhs)
+export default function performOperation(accumulator, rhs) {
+    const lhs = parseFloat(accumulator.number)
     rhs = parseFloat(rhs)
 
-    switch (operator) {
+    switch (accumulator.operator) {
         case '+':
             return lhs + rhs
         case '-':
@@ -13,5 +13,5 @@ export default function performOperation(lhs, rhs, operator) {
             return lhs / rhs
     }
 
-    throw `invalid operator ${operator}`
+    throw `Error: Invalid operator ${accumulator.operator}`
 }

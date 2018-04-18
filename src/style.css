@@ -12,6 +12,8 @@ body {
     background: #C17D11FF;
     color: #0f0a0a;
     height: 110px;
+    max-width: 100%;
+    overflow: hidden;
     margin: 5px;
     font-family: 'Orbitron', sans-serif;
 }

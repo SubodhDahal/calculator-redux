@@ -7,7 +7,7 @@ export default class Display extends React.Component {
         return <div className="columns">
             <div className="column lcd-display">
                 <div className="is-pulled-right lcd-display__aux">
-                    {this.props.accumulator} {this.props.operator}
+                    {this.props.accumulator.number} {this.props.accumulator.operator}
                 </div>
                 <div className="is-clearfix"></div>
 
