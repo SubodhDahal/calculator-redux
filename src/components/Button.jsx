@@ -1,7 +1,5 @@
 import React from 'react'
 
-import {setDigit} from '../store/actions'
-
 export default class Buttons extends React.Component {
     constructor (props) {
         super(props)
@@ -19,6 +17,9 @@ export default class Buttons extends React.Component {
     }
 
     _onClick (button) {
-        return (event) => this.props.clickHandler(button)
+        return (event) => {
+            event.preventDefault()
+            this.props.clickHandler(button)
+        }
     }
 }

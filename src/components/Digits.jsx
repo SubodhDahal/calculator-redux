@@ -33,7 +33,5 @@ export default class Digits extends React.Component {
         } else {
             dispatch(setDigit(label))
         }
-
-        event.preventDefault()
     }
 }
